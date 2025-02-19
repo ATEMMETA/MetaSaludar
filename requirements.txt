@@ -1,0 +1,13 @@
+colorama
+pyvirtualcam
+pyttsx3
+colorama
+cvzone
+mediapipe
+sounddevice
+python_dotenv
+datetime
+opencv-python
+face_recognition
+discord_webhook
+numpy
