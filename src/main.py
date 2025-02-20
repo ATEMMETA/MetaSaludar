@@ -53,6 +53,19 @@ def index():
 
             return redirect(url_for('index'))
 
+@app.route('/', methods=['GET', 'POST'])  # Main page
+def index():
+    # ... (Your face recognition logic for the live feed, similar to what we did before)
+    if request.method == 'POST':
+        if 'addface' in request.form:
+            name = request.form['name']
+            if 'image' in request.files:
+                # ... (Handle image upload and face adding, as before)
+                return redirect(url_for('index')) # Redirect to refresh the page
+    return render_template('index.html')  # Render the HTML template
+
+    
+    
     # --- Face Recognition (Live) ---
     ret, frame = cap.read()
     face_locations, face_names = fr.detect_known_faces(frame)
