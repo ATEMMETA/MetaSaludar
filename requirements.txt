@@ -9,5 +9,4 @@ python_dotenv
 datetime
 opencv-python
 face_recognition
-discord_webhook
 numpy
